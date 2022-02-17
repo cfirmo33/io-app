@@ -22,7 +22,7 @@ import { readablePrivacyReport } from "../../../../../../utils/reporters";
 // convert a paypal psp returned by the API into the app domain model
 const convertNetworkPsp = (psp: NetworkPsp): IOPayPalPsp => ({
   id: psp.idPsp,
-  logoUrl: getPayPalPspIconUrl(psp.codiceAbi),
+  logoUrl: getPayPalPspIconUrl("12345"),
   name: psp.ragioneSociale,
   fee: psp.maxFee as NonNegativeNumber,
   privacyUrl: psp.privacyUrl

@@ -24,6 +24,7 @@ export function* watchApplicationActivitySaga(): IterableIterator<Effect> {
   yield takeEvery(
     getType(applicationChangeState),
     function* (action: ActionType<typeof applicationChangeState>) {
+      console.log("applicationChangeState", action);
       // Listen for changes in application state
       const newApplicationState: ApplicationState = action.payload;
       // eslint-disable-next-line

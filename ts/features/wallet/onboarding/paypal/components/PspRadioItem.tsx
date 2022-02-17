@@ -56,6 +56,7 @@ export const PspRadioItem = (
   const pspInfoBottomSheet = useIOBottomSheetRaw(
     Math.min(420, Dimensions.get("window").height)
   );
+  console.log(imgDimensions);
   const handleInfoPress = () => {
     void pspInfoBottomSheet.present(
       <PspInfoBottomSheetContent

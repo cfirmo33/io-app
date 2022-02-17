@@ -17,6 +17,7 @@ import { setAccessibilityFocus } from "../../utils/accessibility";
 import { isStringNullyOrEmpty, maybeNotNullyString } from "../../utils/strings";
 import ButtonDefaultOpacity from "../ButtonDefaultOpacity";
 import GoBackButton from "../GoBackButton";
+import InstabugChatsComponent from "../InstabugChatsComponent";
 import SearchButton, { SearchType } from "../search/SearchButton";
 import AppHeader from "../ui/AppHeader";
 import I18n from "../../i18n";
@@ -24,7 +25,6 @@ import { IOColors, IOColorType } from "../core/variables/IOColors";
 import { assistanceToolConfigSelector } from "../../store/reducers/backendStatus";
 import { assistanceToolRemoteConfig } from "../../utils/supportAssistance";
 import { ToolEnum } from "../../../definitions/content/AssistanceToolConfig";
-import ChatsComponent from "../ChatsComponent";
 
 type HelpButtonProps = {
   onShowHelp: () => void;
@@ -251,7 +251,7 @@ class BaseHeaderComponent extends React.PureComponent<Props, State> {
             onSearchTap={isSearchAvailable.onSearchTap}
           />
         )}
-        <ChatsComponent />
+        <InstabugChatsComponent />
 
         {onShowHelp && !isSearchEnabled && (
           <HelpButton onShowHelp={onShowHelp} />
