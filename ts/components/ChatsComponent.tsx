@@ -13,7 +13,6 @@ import InstabugChatsComponent from "./InstabugChatsComponent";
 const ChatsComponent = () => {
   const assistanceToolConfig = useIOSelector(assistanceToolConfigSelector);
   const chosenTool = assistanceToolRemoteConfig(assistanceToolConfig);
-
   switch (chosenTool) {
     case ToolEnum.instabug:
       return <InstabugChatsComponent />;

@@ -25,6 +25,7 @@ import { IOColors, IOColorType } from "../core/variables/IOColors";
 import { assistanceToolConfigSelector } from "../../store/reducers/backendStatus";
 import { assistanceToolRemoteConfig } from "../../utils/supportAssistance";
 import { ToolEnum } from "../../../definitions/content/AssistanceToolConfig";
+import ChatsComponent from "../ChatsComponent";
 
 type HelpButtonProps = {
   onShowHelp: () => void;
@@ -251,7 +252,7 @@ class BaseHeaderComponent extends React.PureComponent<Props, State> {
             onSearchTap={isSearchAvailable.onSearchTap}
           />
         )}
-        <InstabugChatsComponent />
+        <ChatsComponent />
 
         {onShowHelp && !isSearchEnabled && (
           <HelpButton onShowHelp={onShowHelp} />

@@ -83,6 +83,10 @@ export const zendeskGetTotalNewResponses = createAsyncAction(
   "ZENDESK_GET_TOTAL_NEW_RESPONSES_FAILURE"
 )<void, number, Error>();
 
+export const zendeskSupportOpened = createStandardAction(
+  "ZENDESK_SUPPORT_OPENED"
+)<void>();
+
 export type ZendeskSupportActions =
   | ActionType<typeof zendeskSupportStart>
   | ActionType<typeof zendeskSupportCompleted>
@@ -92,4 +96,5 @@ export type ZendeskSupportActions =
   | ActionType<typeof getZendeskConfig>
   | ActionType<typeof zendeskSelectedCategory>
   | ActionType<typeof zendeskRequestTicketNumber>
-  | ActionType<typeof zendeskGetTotalNewResponses>;
+  | ActionType<typeof zendeskGetTotalNewResponses>
+  | ActionType<typeof zendeskSupportOpened>;

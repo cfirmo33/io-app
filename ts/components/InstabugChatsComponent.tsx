@@ -12,8 +12,6 @@ import { instabugMessageStateSelector } from "../store/reducers/instabug/instabu
 import ButtonDefaultOpacity from "./ButtonDefaultOpacity";
 import CustomBadge from "./ui/CustomBadge";
 import IconFont from "./ui/IconFont";
-import { showSupportTickets } from "../utils/supportAssistance";
-import { NavigationEvents } from "react-navigation";
 
 interface OwnProps {
   color?: string;
@@ -27,7 +25,6 @@ type State = {
   instabugReportType: Option<BugReporting.reportType>;
   hasChats: boolean;
   isMounted: boolean;
-  ticketsOpened: boolean;
 };
 
 /**
@@ -40,8 +37,7 @@ class InstabugChatsComponent extends React.PureComponent<Props, State> {
     this.state = {
       instabugReportType: none,
       hasChats: false,
-      isMounted: false,
-      ticketsOpened: false
+      isMounted: false
     };
   }
 
@@ -80,13 +76,13 @@ class InstabugChatsComponent extends React.PureComponent<Props, State> {
   public render() {
     // we render the chat icon if the user has previous or new chats with the support team
     const canRenderChatsIcon = this.state.hasChats || this.props.badge > 0;
+    if (!canRenderChatsIcon) {
+      return null;
+    }
     const accessibilityHint = this.getUnreadMessagesDescription();
     return (
       <ButtonDefaultOpacity
-        onPress={() => {
-          showSupportTickets();
-          this.setState({ ticketsOpened: true });
-        }}
+        onPress={this.handleIBChatPress}
         transparent={true}
         accessibilityLabel={I18n.t("global.accessibility.chat.description")}
         accessibilityHint={accessibilityHint}
