@@ -16,6 +16,7 @@
   "io_eu_covid_cert": "https://raw.githubusercontent.com/pagopa/io-backend/v7.37.0-RELEASE/api_eucovidcert.yaml",
   "io_sicilia_vola_token": "https://raw.githubusercontent.com/pagopa/io-backend/master/api_mit_voucher.yaml",
   "api_sicilia_vola": "assets/SiciliaVola.yml",
+  "api_student": "assets/student/spec.yml",
   "pagopa_api": "assets/paymentManager/spec.json",
   "pagopa_api_walletv2": "https://raw.githubusercontent.com/pagopa/io-services-metadata/1.0.7/bonus/specs/bpd/pm/walletv2.json",
   "pagopa_cobadge_configuration": "https://raw.githubusercontent.com/pagopa/io-services-metadata/1.0.7/pagopa/cobadge/abi_definitions.yml",
@@ -69,6 +70,7 @@
     "generate:bpd": "npm-run-all generate:bpd-citizen generate:bpd-citizen-v2 generate:bpd-payment generate:bpd-award-periods generate:bpd-winning-transactions generate:bpd-winning-transactions-v2",
     "generate:cgn": "npm-run-all generate:cgn-definitions generate:cgn-merchants-definitions",
     "generate:sicilia_vola": "npm-run-all generate:io_sicilia_vola_token generate:sicilia_vola_api",
+    "generate:student_api": "rimraf definitions/student && mkdir -p definitions/student && gen-api-models --api-spec $npm_package_api_student --out-dir ./definitions/student --request-types --response-decoders --default-error-type undefined",
     "generate:all": "npm-run-all generate:mock-google-services-json generate:api-definitions generate:pagopa-api-definitions generate:pagopa-api-walletv2 generate:pagopa-cobadge-configuration generate:pagopa-privative-configuration generate:content-definitions generate:bonus-vacanze-definitions generate:bpd generate:cgn generate:eu-covid-cert generate:sicilia_vola generate:locales",
     "locales_unused": "ts-node --skip-project -O '{\"lib\":[\"es2015\"]}' scripts/unused-locales.ts",
     "generate-myportal-readme": "jsdoc2md ts/utils/webviewScripts/*.js > MYPORTAL_README.md"

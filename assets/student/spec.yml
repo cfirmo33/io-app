@@ -1,0 +1,68 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: Public API
+  description: Student API
+host: localhost
+basePath: /
+schemes:
+  - https
+paths:
+  "/students":
+    get:
+      operationId: getStudentsList
+      summary: The list of students
+      description: >
+        Returns the list of all available students
+      responses:
+        "200":
+          description: The list of students
+          schema:
+            $ref: "#/definitions/StudentList"
+        "401":
+          description: Invalid credentials
+        "500":
+          description: Unavailable service
+    post:
+      operationId: addStudentToList
+      summary: Login Test User with password
+      description: Login Test User with password and Fiscal Code
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: "#/definitions/Student"
+          required: true
+      responses:
+        "200":
+          description: Access token
+          schema:
+            $ref: "#/definitions/StudentList"
+        "401":
+          description: Invalid credentials
+        "500":
+          description: Unavailable service
+definitions:
+  StudentList:
+    type: array
+    items:
+      $ref: "#/definitions/Student"
+    title: The list of students
+  Student:
+    type: object
+    title: Student
+    properties:
+      name:
+        type: string
+      surname:
+        type: string
+      age:
+        type: number
+    required:
+      - name
+      - surname
+      - age
+consumes:
+  - application/json
+produces:
+  - application/json
