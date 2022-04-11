@@ -1978,19 +1978,19 @@ faq:
     title: "How to disable biometric recognition?"
     content: !include faq/faq22.md
   23:
-    title: "What kind of messages can you receive?"
+    title: "What kind of messages can I receive?"
     content: !include faq/faq23.md
   24:
-    title: "What happens if you archive messages?"
+    title: "How do I archive a message?"
     content: !include faq/faq24.md
   25:
-    title: "Can messages be deleted?"
+    title: "Can I delete a message?"
     content: !include faq/faq25.md
   26:
-    title: "Is it possible to reply to messages?"
+    title: "What can I do in my messages?"
     content: !include faq/faq26.md
   27:
-    title: "How do you connect a calendar?"
+    title: " Why don't I see the 'Expiring' tab anymore?"
     content: !include faq/faq27.md
   28:
     title: "Are you not interested in this message?"

@@ -1,2 +1,1 @@
-The IO app allows you to receive different types of messages: payment notices (with the possibility of paying contextually through the app), deadline reminders, notifications and various updates.
-These are not generic messages that concern the activity of the entity, but communications that concern you personally, such as a message that warns you of the expiry of a document. Don't expect to receive spam on the IO app - they will only write you services that have something important to tell you.
+On IO you can receive different types of messages: payment notices, deadline reminders, notifications and updates.You will never receive generic messages, but always and only communications that concern you personally, such as a warning of expiry of an identity document.
