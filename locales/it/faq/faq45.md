@@ -1,1 +1,1 @@
-Ogni istituto che gestisce i pagamenti con pagoPA (Prestatori di Servizi di Pagamento) può applicare autonomamente differenti costi, a seconda delle proprie politiche commerciali e delle condizioni contrattuali dell’utente.
+Ogni istituto che gestisce i pagamenti con pagoPA (Prestatori di Servizi di Pagamento) può applicare autonomamente differenti costi, a seconda delle proprie politiche commerciali e delle condizioni contrattuali dell’utente. Puoi trovare i costi applicati dai singoli gestori in [questa pagina](https://www.pagopa.gov.it/it/cittadini/trasparenza-costi/)
